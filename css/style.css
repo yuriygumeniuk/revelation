@@ -262,10 +262,12 @@
 	line-height: 15.6px;
 }
 /*---------- footer ----------*/
-.footer-container {
+.footer {
 	background-color: #222222;
 	padding-top: 30px;
-	height: 280px;
+	/*height: 280px;*/
+}
+.footer-row {
 	display: flex;
 }
 .latest {
@@ -433,7 +435,6 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 60px;
-	background-color: #202020;
 	border-top: 1px solid #3a3a3a;
 }
 .copyright span {
