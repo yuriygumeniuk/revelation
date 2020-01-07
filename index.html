@@ -89,20 +89,7 @@
 					</div>
 				</div>	
 			</div>
-			<!-- 4 -->
-			<div>
-				<div class="banner-slider__item">
-					<div class="banner-slider-img">
-						<img src="img/slider-monitor.svg" alt="Slider picture">
-					</div>
-
-					<div class="banner-text">
-						<span class="banner-text__title">4A CATCHY TITLE</span>
-						<p class="banner-text__description">Cursuspenatisaccum ut curabitur nulla tellus tor ames a in curabitur pede. Idet mollisi eros dis orci congue elis et curabitur consequam intesque. Curabiturpisametur in ante.</p>
-						<a href="#!" class="banner-text__btn">READ MORE »</a>
-					</div>
-				</div>	
-			</div>				
+		
 			<!--  -->
 		</div>
 	</div>	
@@ -218,9 +205,10 @@
 			<div class="newsletter">
 				<div class="newsletter__name">Newsletter</div>
 				<div class="newsletter__form">
-					<form action="#">
+					<form id="subscribe__form" action="">
 						<input type="text" class="form-control" placeholder="Name">
-						<input type="email" class="form-control" placeholder="Email">
+						<!-- <input type="email" class="form-control" placeholder="Email"> -->
+						<input autocomplete="off" type="text" name="form[]" data-value="Email" class="form-control input req email">
 						<input type="submit" value="submit" class="btn">
 					</form>
 				</div>
@@ -252,5 +240,6 @@
 <script src="js/jquery-3.4.1.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
