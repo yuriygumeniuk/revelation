@@ -126,6 +126,7 @@ html,body {
     }
 }
 .name {
+    flex: 1 0 auto;
     @media (max-width: 599px) {
         margin-left: 20px;
     }
@@ -139,15 +140,11 @@ html,body {
 }
 .name__title span:first-child
 {
-    /*font-size: 36px;*/
     font-size: 2.5rem;
-    /*line-height: 36px;*/
 }
 .name__title span:last-child
 {
     font-size: 1.7rem;
-    /*font-size: 26px;*/
-    /*line-height: 26px;*/
 }
 /*---------------*/
 .name__description
@@ -159,34 +156,59 @@ html,body {
     padding-top: 10px;
     color: #999;
 }
-.menu-toggle {
-    position: absolute;
+.menu-toggle.active:before {
+    transform: rotate(45deg) translateY(-50%); 
     top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    right: 0;
-    width: 30px;
-
+} 
+.menu-toggle.active:after {
+    transform: rotate(-45deg) translateY(50%);
+    bottom: 50%;
+} 
+.menu-toggle.active span {
+    visibility: hidden;
+}
+.menu-toggle {
+    visibility: hidden;
     @media (max-width: 599px) {
-        display: inline-block;
-        border: none;
-        background-color: transparent;
-        padding: 0;
+        position: absolute;
+        left: 0;
+        visibility: visible;
+        position: relative;
+        width: 30px;
+        height: 25px;
     }
     span {
-        display: block;
+        position: absolute;
+        background-color: #dedede;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
         height: 3px;
-        background-color: #d2d2d2;
-        /*background-color: darken(#ebebeb, 10%);*/
-        + span {
-            margin-top: 6px;
-        }
+        transition: all 300ms linear;
+    }
+    &:after, &:before {
+        content: '';
+        background-color: #dedede;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 300ms linear;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
     }
 }
 .navigation
 {
-    display: flex;
     list-style: none;
+    @media (min-width: 600px) {
+        display: flex !important;
+    }
     @media (max-width: 599px) {
         padding: 10px;
         position: absolute;
@@ -195,9 +217,6 @@ html,body {
         z-index: 30;
         background-color: #ebebeb;
         flex-direction: column;
-    }
-    @media (min-width: 600px) {
-        display: flex !important;
     }
 }
 .navigation__item

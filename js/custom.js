@@ -10,6 +10,7 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 		if($(window).width() < 600) {
 			$('.navigation').slideToggle(400);
+			$('.menu-toggle').removeClass('active');
 		}
 		return false
 	});
