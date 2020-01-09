@@ -1,5 +1,6 @@
 html,body {
     height: 100%;
+    min-width: 320px;
 }
     @media (max-width: 1199px) {
         .label:after{content: 'mdf3-900-1199';}
@@ -165,7 +166,7 @@ html,body {
     bottom: 50%;
 } 
 .menu-toggle.active span {
-    visibility: hidden;
+    transform: scale(0);
 }
 .menu-toggle {
     visibility: hidden;
@@ -181,11 +182,10 @@ html,body {
         position: absolute;
         background-color: #dedede;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 11px;
         width: 100%;
         height: 3px;
-        transition: all 300ms linear;
+        transition: all 300ms ease 0s;
     }
     &:after, &:before {
         content: '';
@@ -209,6 +209,7 @@ html,body {
     @media (min-width: 600px) {
         display: flex !important;
     }
+    
     @media (max-width: 599px) {
         padding: 10px;
         position: absolute;
@@ -609,10 +610,7 @@ html,body {
     display: flex;
     flex-direction: column;
 }
-.newsletter__form {
-    /*width: 100%;*/
-}
-#subscribe__form {
+.subscribe__form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -728,29 +726,38 @@ html,body {
 }
 .form-control
 {
-    font-family: Georgia, serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 20.58px;
-    height: 31px;
-    margin-bottom: 10px;
-    text-indent: 10px;
-    color: rgba(128, 125, 119, 1);
-    border: none;
-    border-radius: 5px;
-    background-color: #353535;
+
 }
-.form-control.input.focus
-{
-    font-style: normal;
-    color: #d3d7d9;
+.subscribe__name,
+.subscribe__email
+ {
+    .input{
+        font-family: Georgia, serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20.58px;
+        height: 31px;
+        margin-bottom: 10px;
+        text-indent: 10px;
+        color: rgba(128, 125, 119, 1);
+        border: none;
+        border-radius: 5px;
+        background-color: #353535;        
+        &.focus {
+            font-style: normal;
+            color: #d3d7d9;
+        }
+        &.err{
+            box-shadow: 0 0 5px #f06;
+        }   
+    }
 }
-.form-control.input.err
-{
-    box-shadow: 0 0 5px #f06;
+.subscribe__button {
+    flex: 0 0 80px;
 }
-.btn
+.subscribe__btn
 {
+    padding-top: 3px;
     font-family: Georgia, serif;
     font-size: 13px;
     font-weight: bold;

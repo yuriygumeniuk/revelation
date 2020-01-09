@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html, body {
-  height: 100%; }
+  height: 100%;
+  min-width: 320px; }
 
 @media (max-width: 1199px) {
   .label:after {
@@ -181,7 +182,9 @@ html, body {
   bottom: 50%; }
 
 .menu-toggle.active span {
-  visibility: hidden; }
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0); }
 
 .menu-toggle {
   visibility: hidden; }
@@ -197,15 +200,12 @@ html, body {
     position: absolute;
     background-color: #dedede;
     left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 11px;
     width: 100%;
     height: 3px;
-    -webkit-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    transition: all 300ms linear; }
+    -webkit-transition: all 300ms ease 0s;
+    -o-transition: all 300ms ease 0s;
+    transition: all 300ms ease 0s; }
   .menu-toggle:after, .menu-toggle:before {
     content: '';
     background-color: #dedede;
@@ -665,10 +665,7 @@ html, body {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.newsletter__form {
-  /*width: 100%;*/ }
-
-#subscribe__form {
+.subscribe__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,7 +772,8 @@ html, body {
 .newsletter {
   width: 100%; }
 
-.form-control {
+.subscribe__name .input,
+.subscribe__email .input {
   font-family: Georgia, serif;
   font-size: 13px;
   font-weight: 400;
@@ -787,16 +785,22 @@ html, body {
   border: none;
   border-radius: 5px;
   background-color: #353535; }
+  .subscribe__name .input.focus,
+  .subscribe__email .input.focus {
+    font-style: normal;
+    color: #d3d7d9; }
+  .subscribe__name .input.err,
+  .subscribe__email .input.err {
+    -webkit-box-shadow: 0 0 5px #f06;
+    box-shadow: 0 0 5px #f06; }
 
-.form-control.input.focus {
-  font-style: normal;
-  color: #d3d7d9; }
+.subscribe__button {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px; }
 
-.form-control.input.err {
-  -webkit-box-shadow: 0 0 5px #f06;
-  box-shadow: 0 0 5px #f06; }
-
-.btn {
+.subscribe__btn {
+  padding-top: 3px;
   font-family: Georgia, serif;
   font-size: 13px;
   font-weight: bold;
@@ -809,7 +813,7 @@ html, body {
   border-radius: 6px;
   background-color: #9f81a9; }
   @media (max-width: 399px) {
-    .btn {
+    .subscribe__btn {
       margin: 0 auto; } }
 
 .social {

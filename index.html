@@ -226,12 +226,17 @@
 						<div class="footer-item newsletter">
 							<div class="footer-item__title">Newsletter</div>
 							<div class="newsletter__form">
-								<form id="subscribe__form" action="">
-									<input type="text" class="form-control" placeholder="Name">
-									<input type="email" class="form-control" placeholder="Email">
-									<!-- <input autocomplete="off" type="text" name="form[]" data-value="Email" class="form-control"> -->
-									<input type="submit" value="submit" class="btn">
-								</form>
+							<form action="#" class="subscribe__form">
+								<div class="subscribe__name">
+									<input autocomplete="off" type="text" data-value="Name" class="input req name">
+								</div>
+								<div class="subscribe__email">
+									<input autocomplete="off" type="text" data-value="Email" class="input req email">
+								</div>
+								<div class="subscribe__button">
+									<button type="submit" class="subscribe__btn">submit</button>
+								</div>
+							</form>
 							</div>
 							<div class="social">
 								<a href="#!">
@@ -261,7 +266,6 @@
 			<script src="js/jquery-3.4.1.js"></script>
 			<script src="js/slick.js"></script>
 			<script src="js/custom.js"></script>
-			<!-- <script src="js/main.js"></script> -->
 	</div>	
 </body>
 </html>
