@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Geo&display=swap" rel="stylesheet"> 
 	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=600"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
@@ -15,6 +16,7 @@
 				<div class="control_color">
 					<div class="container">
 						<div class="control">
+							<div class="label"></div>
 							<ul class="control-list wrap">
 									<li class="control-list__item"><a href="#!">Sign Up</a></li>
 									<li class="control-list__item"><a href="#!">Login</a></li>
@@ -48,7 +50,14 @@
 
 			<section class="banner">
 				<div class="container">
-					<div class="wrap">
+					<div class="arrow-wrap">
+						<!-- arrow block -->
+						<a href="#!" class="arrow-left">
+							<img src="img/Left_arrow.svg" alt="control left">
+						</a>
+						<a href="#!" class="arrow-right">
+							<img src="img/Right_arrow.svg" alt="control right">
+						</a> <!-- arrow block -->
 						<div class="banner-slider">
 							<!-- 1 -->
 							<div>
@@ -92,17 +101,9 @@
 									</div>
 								</div>	
 							</div>
-						
 							<!--  -->
 						</div>
 					</div>	
-					<!-- arrow block -->
-					<a class="arrow-left" href="#!">
-						<img src="img/Left_arrow.svg" alt="control left">
-					</a>
-					<a href="#!" class="arrow-right">
-						<img src="img/Right_arrow.svg" alt="control right">
-					</a>
 				</div>
 			</section>
 
@@ -142,40 +143,47 @@
 
 			<section class="shout">
 				<div class="text">
-					<p>Nibhnullam libero portis vivamus justo porta cursus arcu quisque sceleifendiment praesentum. Leosodalesuada quis nequat commodo enim curabitur cursus vest eu sodalesuada feugiat.</p>
+					<p>Nibhnullam libero portis vivamus justo porta cursus arcu quisque sceleifendiment praesentum.</p>
+					<p>Leosodalesuada quis nequat commodo enim curabitur cursus vest eu sodalesuada feugiat.</p>
 				</div>
 			</section>
 
 			<section class="work container">
-				<div class="work-container">
-					<!-- 1 -->
-					<div class="work-item">
-						<span class="work__title">Indonectetus facilis</span>
-						<img class="work__img" src="img/work-img.png" alt="Work picture">
-						<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-						<a class="work__link" href="#!">Read More »</a>
+				<!-- 1 -->
+				<div class="work-item">
+					<span class="work__title">Indonectetus facilis</span>
+					<div class="work__img">
+						<img src="img/work-img.png" alt="Work picture">
 					</div>
-					<!-- 2 -->
-					<div class="work-item">
-						<span class="work__title">Indonectetus facilis</span>
-						<img class="work__img" src="img/work-img.png" alt="Work picture">
-						<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-						<a class="work__link" href="#!">Read More »</a>
+					<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+					<a class="work__link" href="#!">Read More »</a>
+				</div>
+				<!-- 2 -->
+				<div class="work-item">
+					<span class="work__title">Indonectetus facilis</span>
+					<div class="work__img">
+						<img src="img/work-img.png" alt="Work picture">
 					</div>
-					<!-- 3 -->
-					<div class="work-item">
-						<span class="work__title">Indonectetus facilis</span>
-						<img class="work__img" src="img/work-img.png" alt="Work picture">
-						<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-						<a class="work__link" href="#!">Read More »</a>
+					<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+					<a class="work__link" href="#!">Read More »</a>
+				</div>
+				<!-- 3 -->
+				<div class="work-item">
+					<span class="work__title">Indonectetus facilis</span>
+					<div class="work__img">
+						<img src="img/work-img.png" alt="Work picture">
 					</div>
-					<!-- 4 -->
-					<div class="work-item">
-						<span class="work__title">Indonectetus facilis</span>
-						<img class="work__img" src="img/work-img.png" alt="Work picture">
-						<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-						<a class="work__link" href="#!">Read More »</a>
+					<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+					<a class="work__link" href="#!">Read More »</a>
+				</div>
+				<!-- 4 -->
+				<div class="work-item">
+					<span class="work__title">Indonectetus facilis</span>
+					<div class="work__img">
+						<img src="img/work-img.png" alt="Work picture">
 					</div>
+					<p class="work__description">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+					<a class="work__link" href="#!">Read More »</a>
 				</div>
 			</section>
 
@@ -183,14 +191,14 @@
 				<div class="container">
 					<div class="footer-row">
 						<div class="footer-item latest">
-							<span class="latest__name">Latest From Blog</span>
+							<span class="footer-item__title">Latest From Blog</span>
 							<span class="latest__title">Post Title</span>
 							<span class="latest__date">Friday, 6th April 2000</span>
 							<p class="latest__description">Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla.</p>
 						</div>
 
 						<div class="footer-item link">
-							<div class="link__name">Link Block</div>
+							<div class="footer-item__title">Link Block</div>
 							<ul class="link__list">
 								<li class="link__item"><a href="#!">Lorem ipsum dolor</a></li>
 								<li class="link__item"><a href="#!">Suspendisse in neque</a></li>
@@ -203,7 +211,7 @@
 						</div>
 
 						<div class="footer-item details">
-							<span class="details-name">Company Details</span>
+							<span class="footer-item__title">Company Details</span>
 							<span class="details-text">Company Name</span>
 							<p class="details-text">Street Name & Number
 								<br>Line Two
@@ -215,12 +223,12 @@
 						</div>
 
 						<div class="footer-item newsletter">
-							<div class="newsletter__name">Newsletter</div>
+							<div class="footer-item__title">Newsletter</div>
 							<div class="newsletter__form">
 								<form id="subscribe__form" action="">
 									<input type="text" class="form-control" placeholder="Name">
-									<!-- <input type="email" class="form-control" placeholder="Email"> -->
-									<input autocomplete="off" type="text" name="form[]" data-value="Email" class="form-control input req email">
+									<input type="email" class="form-control" placeholder="Email">
+									<!-- <input autocomplete="off" type="text" name="form[]" data-value="Email" class="form-control"> -->
 									<input type="submit" value="submit" class="btn">
 								</form>
 							</div>
@@ -252,7 +260,7 @@
 			<script src="js/jquery-3.4.1.js"></script>
 			<script src="js/slick.js"></script>
 			<script src="js/custom.js"></script>
-			<script src="js/main.js"></script>
+			<!-- <script src="js/main.js"></script> -->
 	</div>	
 </body>
 </html>
