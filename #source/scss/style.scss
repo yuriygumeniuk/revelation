@@ -120,14 +120,14 @@ html,body {
     height: 130px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     @media (max-width: 899px) {
         height: 80px;
     }
 }
 .name {
     @media (max-width: 599px) {
-        flex: 1 0 100%;
-        text-align: center;
+        margin-left: 20px;
     }
 }
 .name__title
@@ -156,19 +156,48 @@ html,body {
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
-
     padding-top: 10px;
-
     color: #999;
+}
+.menu-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    right: 0;
+    width: 30px;
+
+    @media (max-width: 599px) {
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+    span {
+        display: block;
+        height: 3px;
+        background-color: #d2d2d2;
+        /*background-color: darken(#ebebeb, 10%);*/
+        + span {
+            margin-top: 6px;
+        }
+    }
 }
 .navigation
 {
     display: flex;
-    height: 27px;
     list-style: none;
-    border-bottom: 1px solid #ebebeb;
     @media (max-width: 599px) {
-        display: none;
+        padding: 10px;
+        position: absolute;
+        top: calc(50% + 20px);
+        right: 0;
+        z-index: 30;
+        background-color: #ebebeb;
+        flex-direction: column;
+    }
+    @media (min-width: 600px) {
+        display: flex !important;
     }
 }
 .navigation__item
@@ -176,6 +205,9 @@ html,body {
     padding-right: 20px;
     @media (max-width: 899px) {
         padding-right: 10px;
+    }
+    @media (max-width: 599px) {
+        padding: 15px 10px;
     }
 }
 .navigation__item:last-child
@@ -192,8 +224,9 @@ html,body {
     text-transform: uppercase;
     color: #333;
     border-bottom: 2px solid rgba(85, 65, 95, 0);
-    @media (max-width: 899px) {
-        /*font-size: 10px;*/
+    @media (max-width: 599px) {
+        font-size: 1.5rem;
+        padding-bottom: 5px;    
     }
 }
 .navigation__item a:hover,

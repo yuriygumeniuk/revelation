@@ -1,8 +1,16 @@
 $(document).ready(function() {
 
+	$('.menu-toggle').click(function(){
+		$(this).toggleClass('active');
+		$('.navigation').slideToggle(400);
+	})
+
 	$('.navigation__item a').click(function(){
 	 	$(this).parents('.navigation').find('.navigation__item').removeClass('active');
 		$(this).parent().addClass('active');
+		if($(window).width() < 600) {
+			$('.navigation').slideToggle(400);
+		}
 		return false
 	});
 
