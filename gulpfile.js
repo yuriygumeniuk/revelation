@@ -34,10 +34,10 @@ gulp.task('styles', function() {
 	}))
 	.pipe(sourcemaps.init())
 	.pipe(sass())
-	// .pipe(gcmq())
+	.pipe(gcmq())
 	.pipe(autoprefixer({
 		browsers: ['last 6 versions'],
-		cascade: false
+		cascade: true
 	}))
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./app/css'))

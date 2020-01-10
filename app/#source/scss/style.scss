@@ -206,12 +206,12 @@ html,body {
         z-index: 30;
         background-color: #ebebeb;
         flex-direction: column;
-        // &.hidden {
-        //     height: 0;
-        //     overflow: hidden;
-        //     width: 0;
-        //     display: none;
-        // }
+        &.hidden {
+            height: 0;
+            overflow: hidden;
+            width: 0;
+            display: none;
+        }
     }
 }
 .navigation__item
@@ -604,11 +604,6 @@ html,body {
     display: flex;
     flex-direction: column;
 }
-.subscribe__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 .footer-item__title
 {
     font-family: Georgia, serif;
@@ -718,20 +713,22 @@ html,body {
 .newsletter {
     width: 100%;
 }
-.form-control
-{
-
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .subscribe__name,
 .subscribe__email
  {
+    margin-bottom: 10px;
     .input{
+        margin: 0 auto;
         font-family: Georgia, serif;
         font-size: 13px;
         font-weight: 400;
         line-height: 20.58px;
         height: 31px;
-        margin-bottom: 10px;
         text-indent: 10px;
         color: rgba(128, 125, 119, 1);
         border: none;
@@ -783,7 +780,6 @@ html,body {
     width: 32px;
     height: 32px;
     margin: 2px;
-    /*margin-right: 10px;*/
     border-radius: 50%;
     background-color: #353535;
 }
@@ -814,7 +810,7 @@ html,body {
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
-    color: #807d77;
+    color: #807d77;    
     @media (max-width: 599px) {
         font-size: 0.8rem;
     }

@@ -1,16 +1,35 @@
 $(document).ready(function() {
 
-	$('.menu-toggle').click(function(){
-		$(this).toggleClass('active');
-		if ($(this).hasClass('active')) {
-			console.log('menu-togle active');
+	$(document).mouseup(function (e){
+		var nav 		= $('.navigation');
+		var burger	= $('.menu-toggle');
+		if ((!nav.is(e.target)) 
+			&& (!burger.is(e.target))
+			&& nav.has(e.target).length === 0
+			&& burger.has(e.target).length === 0)
+			{
+			toggle();
 		}
-		console.log('menu-togle not active');
 	});
+
+	function toggle(){
+		$('.menu-toggle').toggleClass('active');
+		if ($('.menu-toggle').hasClass('active')) {
+			console.log('active');
+			$('.navigation').removeClass('hidden');			
+		}
+		else {
+			console.log('not active');
+			$('.navigation').addClass('hidden');			
+		};		
+	};
+	
+	$('.menu-toggle').click(toggle);
 
 	$('.navigation__item a').click(function(){
 	 	$(this).parents('.navigation').find('.navigation__item').removeClass('active');
 		$(this).parent().addClass('active');
+		$('.navigation').addClass('hidden');
 		if($(window).width() < 600) {
 			$('.menu-toggle').removeClass('active');
 		}
