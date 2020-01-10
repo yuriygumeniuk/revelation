@@ -1,30 +1,11 @@
+﻿@import '_label_media.scss';
+
 html,body {
     height: 100%;
     min-width: 320px;
-}
-@media (max-width: 1199px) {
-    .label:after{content: 'mdf3-900-1199';}
-}
-@media (max-width: 899px) {
-    .label:after{content: 'mdf4-600-899';}
-    html { font-size: 12px; }
-}
-@media (max-width: 599px) {
-    .label:after{content: 'mdf5-400-599';}
-}
-@media (max-width: 399px) {
-    .label:after{content: 'mdf6-0-399';}
-}
-
-.label:after {
-    z-index: 10;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    display: block;
-    padding: 5px;
-    background-color: rgba(102, 153, 153, 0.835);
-    color: #fff;
+    @media (max-width: 899px) {
+       font-size: 12px; 
+    }
 }
 
 .wrapper{

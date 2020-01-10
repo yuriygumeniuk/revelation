@@ -206,9 +206,9 @@ function clearForm(form){
 	});
 }
 function addError(input){
-		input.addClass('err');
-		input.parent().addClass('err');
-		input.parent().find('.form__error').remove();
+	input.addClass('err');
+	input.parent().addClass('err');
+	input.parent().find('.form__error').remove();
 	if(input.hasClass('email')){
 			var error='';
 		if(input.val()=='' || input.val()==input.attr('data-value')){
@@ -230,7 +230,7 @@ function addError(input){
 	}
 }
 function addErrorByName(form,input__name,error_text){
-		var input=form.find('[name="'+input__name+'"]');
+	var input=form.find('[name="'+input__name+'"]');
 	input.attr('data-error',error_text);
 	addError(input);
 }
