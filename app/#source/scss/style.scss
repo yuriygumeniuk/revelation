@@ -2,19 +2,19 @@ html,body {
     height: 100%;
     min-width: 320px;
 }
-    @media (max-width: 1199px) {
-        .label:after{content: 'mdf3-900-1199';}
-    }
-    @media (max-width: 899px) {
-        .label:after{content: 'mdf4-600-899';}
-        html { font-size: 12px; }
-    }
-    @media (max-width: 599px) {
-        .label:after{content: 'mdf5-400-599';}
-    }
-    @media (max-width: 399px) {
-        .label:after{content: 'mdf6-0-399';}
-    }
+@media (max-width: 1199px) {
+    .label:after{content: 'mdf3-900-1199';}
+}
+@media (max-width: 899px) {
+    .label:after{content: 'mdf4-600-899';}
+    html { font-size: 12px; }
+}
+@media (max-width: 599px) {
+    .label:after{content: 'mdf5-400-599';}
+}
+@media (max-width: 399px) {
+    .label:after{content: 'mdf6-0-399';}
+}
 
 .label:after {
     z-index: 10;
@@ -25,22 +25,6 @@ html,body {
     padding: 5px;
     background-color: rgba(102, 153, 153, 0.835);
     color: #fff;
-
-/*    @media (max-width: 399px) {
-        content: 'md1-0-399';
-    }
-    @media (min-width: 400px) {
-        content: 'md2-400-599';
-    }
-    @media (min-width: 600px) {
-        content: 'md3-600-899';
-    }
-    @media (min-width: 900px) {
-        content: 'md4-900-1199';
-    }
-    @media (min-width: 1200px) {
-        content: 'md5-1200->';
-    }*/
 }
 
 .wrapper{
@@ -74,6 +58,7 @@ html,body {
 .control_color
 {
     background-color: #55415f;
+    // background-color: red;
 }
 .control
 {
@@ -170,10 +155,12 @@ html,body {
 }
 .menu-toggle {
     visibility: hidden;
+    display: none;
     @media (max-width: 599px) {
         position: absolute;
         left: 0;
         visibility: visible;
+        display: block;
         position: relative;
         width: 30px;
         height: 25px;
@@ -206,6 +193,7 @@ html,body {
 .navigation
 {
     list-style: none;
+    // transition: all 300ms linear;
     @media (min-width: 600px) {
         display: flex !important;
     }
@@ -218,6 +206,12 @@ html,body {
         z-index: 30;
         background-color: #ebebeb;
         flex-direction: column;
+        // &.hidden {
+        //     height: 0;
+        //     overflow: hidden;
+        //     width: 0;
+        //     display: none;
+        // }
     }
 }
 .navigation__item

@@ -2,14 +2,16 @@ $(document).ready(function() {
 
 	$('.menu-toggle').click(function(){
 		$(this).toggleClass('active');
-		$('.navigation').slideToggle(400);
-	})
+		if ($(this).hasClass('active')) {
+			console.log('menu-togle active');
+		}
+		console.log('menu-togle not active');
+	});
 
 	$('.navigation__item a').click(function(){
 	 	$(this).parents('.navigation').find('.navigation__item').removeClass('active');
 		$(this).parent().addClass('active');
 		if($(window).width() < 600) {
-			$('.navigation').slideToggle(400);
 			$('.menu-toggle').removeClass('active');
 		}
 		return false
