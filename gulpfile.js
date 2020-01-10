@@ -35,7 +35,7 @@ gulp.task('styles', function() {
 	.pipe(gcmq())
 	.pipe(autoprefixer({
 		browsers: ['last 6 versions'],
-		cascade: true
+		cascade: false
 	}))
 	.pipe(gulp.dest('./app/css'))
 	.pipe(browserSync.stream());
