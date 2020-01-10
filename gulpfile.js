@@ -3,7 +3,6 @@ var browserSync = require('browser-sync').create();
 var sass 		= require('gulp-sass');
 var plumber 	= require('gulp-plumber');
 var notify 		= require('gulp-notify');
-var sourcemaps	= require('gulp-sourcemaps');
 var autoprefixer= require('gulp-autoprefixer');
 var watch 		= require('gulp-watch');
 var gcmq		= require('gulp-group-css-media-queries');
@@ -32,14 +31,12 @@ gulp.task('styles', function() {
 			}
 		})
 	}))
-	.pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(gcmq())
 	.pipe(autoprefixer({
 		browsers: ['last 6 versions'],
 		cascade: true
 	}))
-	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./app/css'))
 	.pipe(browserSync.stream());
 });
