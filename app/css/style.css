@@ -748,7 +748,8 @@ body {
     content: 'mdf4-600-899';
   }
 
-  html {
+  html,
+  body {
     font-size: 12px;
   }
 
