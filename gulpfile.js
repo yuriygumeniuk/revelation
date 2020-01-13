@@ -6,22 +6,21 @@ var notify 		= require('gulp-notify');
 var autoprefixer= require('gulp-autoprefixer');
 var watch 		= require('gulp-watch');
 var gcmq		= require('gulp-group-css-media-queries');
+var watch		= require('gulp-watch');
 
-gulp.task('server', ['styles'], function() {
-	
+gulp.task('server', function() {
 	browserSync.init({
 		server: { baseDir: './app/'}
 	});
+});
 
-    watch(['./app/**/*.html', './app/**/*.js', './app/img/**/*.*']).on('change', browserSync.reload);
-
-	watch('./app/#source/**/*.scss', function(){
-		gulp.start('styles');
-	});
+gulp.task('watch', function() {
+	gulp.watch(['./app/**/*.html', './app/**/*.js', './app/img/**/*.*']).on('change', browserSync.reload);
+	gulp.watch('./#source/**/*.scss', ['styles']);
 });
 
 gulp.task('styles', function() {
-	return gulp.src('./app/#source/scss/style.scss')
+	return gulp.src('./#source/scss/style.scss')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
@@ -41,4 +40,4 @@ gulp.task('styles', function() {
 	.pipe(browserSync.stream());
 });
 
-gulp.task('default', ['server']);
+gulp.task('default', ['server', 'styles', 'watch'] );
